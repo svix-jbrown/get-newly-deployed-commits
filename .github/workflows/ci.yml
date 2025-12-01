@@ -8,6 +8,7 @@ on:
       - main
 permissions:
   contents: read
+  deployments: read
 jobs:
   test-javascript:
     name: JavaScript Tests
