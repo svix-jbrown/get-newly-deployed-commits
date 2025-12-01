@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "bundle": "npm run format:write && npm run package",
     "format:write": "npx prettier --write .",

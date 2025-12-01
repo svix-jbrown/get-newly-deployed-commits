@@ -31364,14 +31364,19 @@ function populateOutput(metadata) {
   coreExports.setOutput("previous-sha", metadata.previousSha);
 }
 
-try {
-  const token = githubExports.context.github.token;
-  const octokit = githubExports.getOctokit(token);
-  const metadata = await getCommits(octokit);
-  populateOutput(metadata);
-} catch (error) {
-  coreExports.setFailed(error.message);
+async function run() {
+  try {
+    const token = githubExports.context.github.token;
+    const octokit = githubExports.getOctokit(token);
+    const metadata = await getCommits(octokit);
+    populateOutput(metadata);
+  } catch (error) {
+    if (error instanceof Error) coreExports.setFailed(error.message);
+  }
 }
 
 // vim: set ts=2 sw=2 sts=0:
+
+/* istanbul ignore next */
+run();
 //# sourceMappingURL=index.js.map
