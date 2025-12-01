@@ -1,6 +1,9 @@
 name: Get Newly Deployed Commits
 description: Get metadata about newly-deployed commits in a given environment of repository
 inputs:
+  token:
+    description: GitHub token
+    required: true
   owner:
     description: owner of the repository
     required: true

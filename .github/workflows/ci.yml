@@ -42,6 +42,7 @@ jobs:
         id: test-action
         uses: ./
         with:
+          token: ${{ github.token }}
           environment: staging
           owner: svix-jbrown
           repo: get-newly-deployed-commits
