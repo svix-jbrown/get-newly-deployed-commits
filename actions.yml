@@ -1,0 +1,27 @@
+name: Get Newly Deployed Commits
+description: Get metadata about newly-deployed commits in a given environment of repository
+inputs:
+  owner:
+    description: owner of the repository
+    required: true
+  repo:
+    description: name of the repository
+    required: true
+  environment:
+    description: name of the deployment environment
+    required: true
+  sha:
+    description: SHA of the current deployment
+    required: true
+outputs:
+  authors:
+    description: A whitespace-separated list of authors for the commits included in this deployment
+  shas:
+    description: A whitespace-separated list of SHAs for the commits included in this deployment
+  num-commits:
+    description: The number of commits included in this deployment
+  previous-sha:
+    description: The SHA of the last deployment to this environment
+runs:
+  using: node24
+  main: dist/index.js
