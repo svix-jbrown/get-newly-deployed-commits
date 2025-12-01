@@ -31366,7 +31366,7 @@ function populateOutput(metadata) {
 
 async function run() {
   try {
-    const token = githubExports.context.github.token;
+    const token = coreExports.getInput("token");
     const octokit = githubExports.getOctokit(token);
     const metadata = await getCommits(octokit);
     populateOutput(metadata);
