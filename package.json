@@ -30,7 +30,7 @@
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
     "@github/local-action": "^6.0.2",
-    "@rollup/plugin-commonjs": "^28.0.9",
+    "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
