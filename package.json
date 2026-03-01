@@ -38,6 +38,6 @@
     "eslint-plugin-prettier": "^5.5.5",
     "prettier": "^3.8.1",
     "prettier-eslint": "^16.4.2",
-    "rollup": "^4.57.1"
+    "rollup": "^4.59.0"
   }
 }
